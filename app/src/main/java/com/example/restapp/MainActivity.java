@@ -4,20 +4,29 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+
 import com.example.restapp.databinding.ActivityMainBinding;
 
 public class MainActivity extends Activity {
 
     private TextView mTextView;
-    private ActivityMainBinding binding;
+    private Button mButton;
+    private final List<String>  Mensajes= Arrays.asList("holi", "Hello", "¿ Que tal?",
+      "¿Como estas?", "Bienvenido", "Buenos Dias", "Buenas Noches");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        mTextView = findViewById(R.id.Mensaje);
+        mButton = findViewById(R.id.Boton);
 
-        mTextView = binding.text;
+        string mensaje = setText(Mensajes.get(1));
+        mTextView = setText(Mensajes);
+
+
+
+
+
     }
 }
